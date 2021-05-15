@@ -18,6 +18,11 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link href="https://momentjs.com/downloads/moment.js">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,800;1,300;1,400;1,800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -28,18 +33,163 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+
     <main class="container">
-      <section class="card">
-        <div class="card-body"><!--first line-->
-          <h2>This is the first line</h2>
-          <div class="card"> <!--hours-->
+      <div class="container text-center clock">
+        <h2>Current Time &amp; Date: <br /> <span id="time-display">00:00:00</span></h2>
+      </div>
+     
+      <section id="09" class="card ">
+        <div class="card-body blockOtime">
+          <div class="card hour"> <!--hours-->
             <div class="card-body hours">
               <h5 id="hour">09:00</h5>
             </div>
           </div>
           <div class="card">
             <div class="card-body activity">
-              <h2> the activities</h2>
+              <h4>Index 0</h4>
+              <p> the activities get entered in here.  Should be able to handle multiple lines.  should have done a lorem</p>
+            </div>
+          </div>
+          <div class="card"> <!--hours-->
+            <div class="card-body ">
+              <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card ">
+        <div class="card-body blockOtime">
+          <div class="card hour"> <!--hours-->
+            <div class="card-body hours">
+              <h5 id="hour">10:00</h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body activity">
+              <h4>Index 0</h4>
+              <p> the activities get entered in here.  Should be able to handle multiple lines.  should have done a lorem</p>
+            </div>
+          </div>
+          <div class="card"> <!--hours-->
+            <div class="card-body ">
+              <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card ">
+        <div class="card-body blockOtime">
+          <div class="card hour"> <!--hours-->
+            <div class="card-body hours">
+              <h5 id="hour">11:00</h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body activity">
+              <h4>Index 0</h4>
+              <p> the activities get entered in here.  Should be able to handle multiple lines.  should have done a lorem</p>
+            </div>
+          </div>
+          <div class="card"> <!--hours-->
+            <div class="card-body ">
+              <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card ">
+        <div class="card-body blockOtime">
+          <div class="card hour"> <!--hours-->
+            <div class="card-body hours">
+              <h5 id="hour">12:00</h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body activity">
+              <h4>Index 0</h4>
+              <p> the activities get entered in here.  Should be able to handle multiple lines.  should have done a lorem</p>
+            </div>
+          </div>
+          <div class="card"> <!--hours-->
+            <div class="card-body ">
+              <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card ">
+        <div class="card-body blockOtime">
+          <div class="card hour"> <!--hours-->
+            <div class="card-body hours">
+              <h5 id="hour">01:00</h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body activity">
+              <h4>Index 0</h4>
+              <p> the activities get entered in here.  Should be able to handle multiple lines.  should have done a lorem</p>
+            </div>
+          </div>
+          <div class="card"> <!--hours-->
+            <div class="card-body ">
+              <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card ">
+        <div class="card-body blockOtime">
+          <div class="card hour"> <!--hours-->
+            <div class="card-body hours">
+              <h5 id="hour">02:00</h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body activity">
+              <h4>Index 0</h4>
+              <p> the activities get entered in here.  Should be able to handle multiple lines.  should have done a lorem</p>
+            </div>
+          </div>
+          <div class="card"> <!--hours-->
+            <div class="card-body ">
+              <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card ">
+        <div class="card-body blockOtime">
+          <div class="card hour"> <!--hours-->
+            <div class="card-body hours">
+              <h5 id="hour">03:00</h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body activity">
+              <h4>Index 0</h4>
+              <p> the activities get entered in here.  Should be able to handle multiple lines.  should have done a lorem</p>
+            </div>
+          </div>
+          <div class="card"> <!--hours-->
+            <div class="card-body ">
+              <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card ">
+        <div class="card-body blockOtime">
+          <div class="card hour"> <!--hours-->
+            <div class="card-body hours">
+              <h5 id="hour">04:00</h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body activity">
+              <h4>Index 0</h4>
+              <p> the activities get entered in here.  Should be able to handle multiple lines.  should have done a lorem</p>
             </div>
           </div>
           <div class="card"> <!--hours-->
@@ -49,129 +199,11 @@
         </div>
       </section>
     
-      <section class="card">
-        <div class="card-body"><!--first line-->
-          <h2>This is the first line</h2>
-          <div class="card"> <!--hours-->
-            <div class="card-body hours">
-              <h5 id="hour">09:00</h5>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body activity">
-              <h2> the activities</h2>
-            </div>
-          </div>
-          <div class="card"> <!--hours-->
-            <div class="card-body ">
-              <button type="button" class="btn btn-primary">Primary</button>
-          </div>
-        </div>
-      </section>
-   
-      <section class="card">
-        <div class="card-body"><!--first line-->
-          <h2>This is the first line</h2>
-          <div class="card"> <!--hours-->
-            <div class="card-body hours">
-              <h5 id="hour">09:00</h5>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body activity">
-              <h2> the activities</h2>
-            </div>
-          </div>
-          <div class="card"> <!--hours-->
-            <div class="card-body ">
-              <button type="button" class="btn btn-primary">Primary</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="card-body"><!--first line-->
-          <h2>This is the first line</h2>
-          <div class="card"> <!--hours-->
-            <div class="card-body hours">
-              <h5 id="hour">09:00</h5>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body activity">
-              <h2> the activities</h2>
-            </div>
-          </div>
-          <div class="card"> <!--hours-->
-            <div class="card-body ">
-              <button type="button" class="btn btn-primary">Primary</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="card-body"><!--first line-->
-          <h2>This is the first line</h2>
-          <div class="card"> <!--hours-->
-            <div class="card-body hours">
-              <h5 id="hour">09:00</h5>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body activity">
-              <h2> the activities</h2>
-            </div>
-          </div>
-          <div class="card"> <!--hours-->
-            <div class="card-body ">
-              <button type="button" class="btn btn-primary">Primary</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="card-body"><!--first line-->
-          <h2>This is the first line</h2>
-          <div class="card"> <!--hours-->
-            <div class="card-body hours">
-              <h5 id="hour">09:00</h5>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body activity">
-              <h2> the activities</h2>
-            </div>
-          </div>
-          <div class="card"> <!--hours-->
-            <div class="card-body ">
-              <button type="button" class="btn btn-primary">Primary</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="card-body"><!--first line-->
-          <h2>This is the first line</h2>
-          <div class="card"> <!--hours-->
-            <div class="card-body hours">
-              <h5 id="hour">09:00</h5>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body activity">
-              <h2> the activities</h2>
-            </div>
-          </div>
-          <div class="card"> <!--hours-->
-            <div class="card-body ">
-              <button type="button" class="btn btn-primary">Primary</button>
-          </div>
-        </div>
-      </section>
 
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

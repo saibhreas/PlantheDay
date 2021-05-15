@@ -1,9 +1,22 @@
+*{box-sizing: border-box;
+
+}
+
+.date-time{
+text-align: center;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
+.clock{
+  background-color: hsl(143, 54%, 81%);
+  border: solid 2px gray;
+  border-radius: 15px;
+}
 textarea {
   background: transparent;
   border: none;
@@ -13,12 +26,37 @@ textarea {
   padding: 10px;
 }
 
+.chuncks{
+  background-color:#17a2b8;);
+}
+
+.future{
+  background-color:greenyellow;
+}
+.present{
+  background-color: rgb(145, 59, 59);
+}
+.past{
+  background-color: darkgray;
+}
+.blockOtime {
+  flex-direction: row;
+  justify-content: flex-start;
+  display: inline-flex;
+}
+
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: 00796B;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+}
+.main{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top: 1%;
+  max-width: fit-content;
 }
 
 .description {
@@ -28,6 +66,7 @@ textarea {
 .time-block {
   text-align: center;
   border-radius: 15px;
+  padding: top 2%; ;
 }
 
 .row {
@@ -69,15 +108,24 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+
+
 .hours {
-  background-color:blue;
+  background-color: #20c997;
   max-width:100px ;
-  max-height: 50px;
+  max-height: auto;
   font-size: 12px;
-  padding-bottom: 5px;
-  color: white;
+  padding-bottom: 5px ;
+  color: rgb(7, 10, 10);
 }
 .activity{
   background-color:yellow;
   max-width: 80%;
 }
+
+/*.description// {
+  white-space: pre-wrap;
+}
+
+*/
