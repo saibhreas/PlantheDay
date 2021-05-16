@@ -12,13 +12,23 @@ var threePm =[03, textArea, saveBtn03];
 var fourPm =[04, textArea, saveBtn04];
 var fivePm =[05, textArea, saveBtn05];*/
 
-/*
-function checknow(check){
-  for (i=0, i<9, i++){
+var $text9= $("#text9AM");
+var $text10= $("#text10AM");
+var $text11= $("#text11AM");
+var $text12= $("#text12PM");
+var $text1= $("#text12PM");
+var $text2= $("#text12PM");
+var $text3= $("#text12PM");
+var $text4= $("#text12PM");
+var $text5= $("#text12PM");
 
-  }
-}
-*/
+$("button").on("click", function(){
+  localStorage.setItem("9AM", ($text9AM.val()))
+
+})
+
+
+
 
 
 function displayTime() {
