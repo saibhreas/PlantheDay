@@ -83,21 +83,22 @@ function displayTime() {
     console.log(theDay.length);
     console.log("Value of Present: " + check);
     for (i =0; i<theDays.length; i++) {
-      if (check >timeSlots[i].id){
+      if (check > theDay[i].id){
         console.log(theDay[i].id);
         console.log(check);
-      document.querySelector('.textarea').style.backgroundColor = "#808080";
-      console.log("Check "+ check +" Time Slots= " + timeSlots[i]);
+        document.querySelector('.textarea').style.backgroundColor ="future";
+        console.log("Check "+ check +" Time Slots= " + theDay[i]);
       }
-      else if  (check == timeSlots[i]){
-        document.querySelector('.textarea').style.backgroundColor = "red";
+      else if  (check == theDay[i].id){
+        theDAy[i].textarea.style.backgroundColor="present";
       }
       else
-      document.querySelector('.textarea').style.backgroundColor = "green";
+      document.querySelector('.textarea').style.backgroundColor="past";
 
     }
   }
 }
+
 
 
 setInterval(displayTime, 1000);
