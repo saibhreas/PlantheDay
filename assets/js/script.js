@@ -61,4 +61,4 @@ function updateTime() {
 
 //getting the content stored and sending to the screen. When page is refreshed content will stay
 
-setInterval(updateTime, 10000);
+setInterval(updateTime, 10);
