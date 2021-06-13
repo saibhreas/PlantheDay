@@ -1,106 +1,64 @@
-var timeDispEl= $("#time-display");
-var check = "";
-var theDay =[
-  {
-    id :09,
-    textarea: "",
-  },
-  {
-    id:10,
-    textarea: "",
-  },
-  {
-    id :11,
-    textarea: "",
-  },
-  {
-    id:12,
-    textarea: "",
-  },
-  {
-    id :01,
-    textarea: "",
-  },
-  {
-    id :09,
-    textarea: "",
-  },
-  {
-    id:10,
-    textarea: "",
-  },
-  {
-    id :11,
-    textarea: "",
-  },
-  {
-    id:12,
-    textarea: "",
-  },
-  {
-    id :01,
-    textarea: "",
-  },
-  
-]
+var timeDispEl = $("#time-display");
 
+var $text9AM = $("#text9AM");
+var $text10AM = $("#text10AM");
+var $text11AM = $("#text11AM");
+var $text12AM = $("#text12AM");
+var $text1PM = $("#text1PM");
+var $text2PM = $("#text2PM");
+var $text3PM = $("#text3PM");
+var $text4PM = $("#text4PM");
+var $text5PM = $("#text5PM");
 
-var row1=09;
-var row2=10
-var row3=11;
-var row4=12;
-var row5=01;
-var row6=02;
-var row7=03
-var row8=04;
-var row9=05;
-var row10=06;
-
-var timeSlots =(row1, row2, row3, row4, row5, row6, row7, row8, row8, row9, row10);
-//changes
-/* making sure everything loads proplerly, in the right order for DOM seraches*/
-$(document).ready(function(){
-  console.log("ready");
-})
-console.log("This is the value of id 09  "+ row1)
-console.log("This is row9's value  "+ row9);
-console.log(theDay);
-
-
-
-
-function displayTime() {
-  var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+function updateTime() {
+  var rightNow = moment().format("MMM DD, YYYY [at] hh:mm a");
   timeDispEl.text(rightNow);
-  var present = rightNow.substring(16,18);
-  
-  var check = parseInt(present);
+  console.log(rightNow);
+  var present = rightNow.substring(16, 18);
+
+  var now = parseInt(present);
+  console.log("This is the Check digits " + now);
   //console.log ("my check of check " + check);
-  return check;
-
-
-  function checkpresent(theDay, check){
-    console.log(theDay.length);
-    console.log("Value of Present: " + check);
-    for (i =0; i<theDays.length; i++) {
-      if (check > theDay[i].id){
-        console.log(theDay[i].id);
-        console.log(check);
-        document.querySelector('.textarea').style.backgroundColor ="future";
-        console.log("Check "+ check +" Time Slots= " + theDay[i]);
-      }
-      else if  (check == theDay[i].id){
-        theDAy[i].textarea.style.backgroundColor="present";
-      }
-      else
-      document.querySelector('.textarea').style.backgroundColor="past";
-
+  $("textarea").each(function () {
+    var name = parseInt($(this).attr("name"));
+    if (name < now) {
+      $(this).addClass("bg-gray");
     }
-  }
+
+    if (name > now) {
+      $(this).addClass("bg-green");
+    }
+
+    if (name === now) {
+      $(this).addClass("bg-red");
+    }
+  });
+
+  $("button").on("click", function () {
+    //setting items in the local storage
+    localStorage.setItem("9AM", $text9AM.val());
+    localStorage.setItem("10AM", $text10AM.val());
+    localStorage.setItem("11AM", $text11AM.val());
+    localStorage.setItem("12AM", $text12AM.val());
+    localStorage.setItem("13PM", $text1PM.val());
+    localStorage.setItem("14PM", $text2PM.val());
+    localStorage.setItem("15PM", $text3PM.val());
+    localStorage.setItem("16PM", $text4PM.val());
+    localStorage.setItem("17PM", $text5PM.val());
+  });
+  $("#text9AM").append(localStorage.getItem("9AM"));
+  $("#text10AM").append(localStorage.getItem("10AM"));
+  $("#text11AM").append(localStorage.getItem("11AM"));
+  $("#text12AM").append(localStorage.getItem("12AM"));
+  $("#text1PM").append(localStorage.getItem("13PM"));
+  $("#text2PM").append(localStorage.getItem("14PM"));
+  $("#text3PM").append(localStorage.getItem("15PM"));
+  $("#text4PM").append(localStorage.getItem("16PM"));
+  $("#text5PM").append(localStorage.getItem("17PM"));
+
+  return now;
 }
 
+//getting the content stored and sending to the screen. When page is refreshed content will stay
 
-
-setInterval(displayTime, 1000);
-
-
+setInterval(updateTime, 10000);
